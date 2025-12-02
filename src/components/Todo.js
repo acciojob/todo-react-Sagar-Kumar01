@@ -49,11 +49,13 @@ function Todo() {
       <button onClick={adding}>{editId === null ? "Add Todo" : "Save"}</button>
 
       {todo.map((val) => (
-        <div key={val.id}>
+        <ul>
+        <li key={val.id}>
           <p>{val.text}</p>
           <button onClick={() => deleting(val.id)}>Remove</button>
           <button onClick={() => editing(val.id)}>Edit</button>
-        </div>
+        </li>
+        </ul>
       ))}
     </div>
   );
